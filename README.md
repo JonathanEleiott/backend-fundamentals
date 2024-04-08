@@ -46,11 +46,20 @@
 - npm init -y (creates packge.json)
 - npm i express
 
+## Server Notes
+
+- app.listen takes in an optional second parameter (function that will run when the server starts)
+- the function in a route will take in a request and a response
+- request -> from the frontend (usually the browser)
+- response -> what the server sends back to the frontend
+- __dirname -> used to get the folder location of where the file is located
+- res.sendFile -> send a file
+  - make sure you send the correct HTML file (not a React one)
+- app.use -> all request types
+- no path written will accept all endpoints
+- express.static -> checks whole folder for a file
+
 ## Notes
 
 - node uses module.exports and require instead of export and import
-- app.listen takes in an optional second parameter (function that will run when the server starts)
-- the function in a route will take in a request and a response
-  - request -> from the frontend (usually the browser)
-  - response -> what the server sends back to the frontend
-
+- nodemon -> package that will auto run a file when something changes

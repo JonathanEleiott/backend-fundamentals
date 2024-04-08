@@ -34,19 +34,12 @@ const puppies = [
 ]
 
 app.get('/', (req, res) => {
-  console.log('request made to / route');
-
-
-  res.send(`
-    <h1>Welcome</h1>
-
-    <h2>bunnies r awesome!</h2>
-
-    <script>
-      console.log('I like bunnies!');
-    </script>
-  `);
+  res.sendFile(`${__dirname}/index.html`);
 });
+
+app.get('/people', (req, res) => {
+  res.send('All of the people!!!!');
+})
 
 app.get('/api/v1/bunnies', (req, res) => {
   res.send(bunnies);
